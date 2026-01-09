@@ -4,9 +4,9 @@ A Flutter package containing reusable widgets and utility functions for Lokio.de
 
 ## Features
 
-✨ **UI Components** - Pre-built widgets following Lokio.dev design system  
-🔧 **Formatter Utilities** - Comprehensive formatting functions for strings, numbers, dates, and more  
-✅ **Well Tested** - 170+ unit tests covering all functionality
+**UI Components** - Pre-built widgets following Lokio.dev design system  
+**Formatter Utilities** - Comprehensive formatting functions for strings, numbers, dates, and more  
+**Well Tested** - 170+ unit tests covering all functionality
 
 ## Installation
 
@@ -29,7 +29,7 @@ flutter pub get
 import 'package:sayur_segar/sayur_segar.dart';
 
 // Use button components
-SayurSegar(
+SayurSegarButton(
   onPressed: () {},
   variant: ButtonVariant.primary,
   child: Text('Click Me'),
@@ -53,9 +53,8 @@ flutter run
 
 ## Documentation
 
-📚 **Full Documentation**: [flutter.lokio.dev](https://flutter.lokio.dev)  
-🏠 **Homepage**: [sayursegar.lokio.dev](https://sayursegar.lokio.dev)  
-💻 **Repository**: [GitHub](https://github.com/sayur-segar/sayur-segar-for-flutter)
+**Full Documentation**: [flutter.lokio.dev/pkg/sayur_segar](https://flutter.lokio.dev/pkg/sayur_segar)  
+**Repository**: [GitHub](https://github.com/sayur-segar/sayur-segar-for-flutter)
 
 ## License
 
