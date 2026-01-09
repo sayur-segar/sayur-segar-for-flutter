@@ -1,6 +1,6 @@
 /// Sayur Segar Design System
 ///
-/// A Flutter package containing reusable widgets and functions for Lokio.dev projects. Provides UI components and utility functions that can be reused to accelerate Flutter application development
+/// A Flutter package containing reusable widgets and functions for Sayur Segar projects. Provides UI components and utility functions that can be reused to accelerate Flutter application development
 /// for Sayur Segar applications.
 library;
 

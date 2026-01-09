@@ -106,35 +106,35 @@ class _ButtonsExampleState extends State<ButtonsExample> {
           ),
           const SizedBox(height: 16),
           _buildSection('Primary Buttons', [
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.primary,
               size: ButtonSize.tiny,
               child: const Text('Tiny'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.primary,
               size: ButtonSize.small,
               child: const Text('Small'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.primary,
               size: ButtonSize.medium,
               child: const Text('Medium'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.primary,
               size: ButtonSize.large,
               child: const Text('Large'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.primary,
               size: ButtonSize.giant,
@@ -142,13 +142,13 @@ class _ButtonsExampleState extends State<ButtonsExample> {
             ),
           ]),
           _buildSection('Secondary Buttons', [
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.secondary,
               child: const Text('Secondary'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.secondary,
               isExpanded: true,
@@ -156,13 +156,13 @@ class _ButtonsExampleState extends State<ButtonsExample> {
             ),
           ]),
           _buildSection('Outline Buttons', [
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.outline,
               child: const Text('Outline'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.outline,
               isExpanded: true,
@@ -170,13 +170,13 @@ class _ButtonsExampleState extends State<ButtonsExample> {
             ),
           ]),
           _buildSection('Text Buttons', [
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.text,
               child: const Text('Text Button'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.text,
               isExpanded: true,
@@ -184,14 +184,14 @@ class _ButtonsExampleState extends State<ButtonsExample> {
             ),
           ]),
           _buildSection('Icon Buttons', [
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.icon,
               leadingIcon: const Icon(Icons.favorite),
               child: const Text('With Icon'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: () {},
               variant: ButtonVariant.primary,
               leadingIcon: const Icon(Icons.add),
@@ -200,14 +200,14 @@ class _ButtonsExampleState extends State<ButtonsExample> {
             ),
           ]),
           _buildSection('Loading State', [
-            LokioButton(
+            SayurSegar(
               onPressed: _isLoading ? null : _toggleLoading,
               variant: ButtonVariant.primary,
               isLoading: _isLoading,
               child: const Text('Click to Load'),
             ),
             const SizedBox(height: 8),
-            LokioButton(
+            SayurSegar(
               onPressed: null,
               variant: ButtonVariant.primary,
               child: const Text('Disabled'),

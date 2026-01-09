@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Design tokens system for Lokio Design System
+/// Design tokens system for Sayur Segar Design System
 ///
 /// This class provides all the color tokens for buttons and other components.
 /// You can customize colors by creating a custom instance.
@@ -8,15 +8,15 @@ import 'package:flutter/material.dart';
 /// Example:
 /// ```dart
 /// // Use default theme
-/// final theme = LokioTheme.defaultTheme();
+/// final theme = SayurSegarTheme.defaultTheme();
 ///
 /// // Create custom theme
-/// final customTheme = LokioTheme.custom(
+/// final customTheme = SayurSegarTheme.custom(
 ///   primaryBackground: Colors.blue,
 ///   primaryForeground: Colors.white,
 /// );
 /// ```
-class LokioTheme {
+class SayurSegarTheme {
   // Primary button colors
   final Color primaryBackground;
   final Color primaryForeground;
@@ -48,7 +48,7 @@ class LokioTheme {
   // Border radius (default)
   final double defaultBorderRadius;
 
-  const LokioTheme({
+  const SayurSegarTheme({
     required this.primaryBackground,
     required this.primaryForeground,
     required this.secondaryBackground,
@@ -67,8 +67,8 @@ class LokioTheme {
   });
 
   /// Default theme with modern blue color scheme
-  factory LokioTheme.defaultTheme() {
-    return const LokioTheme(
+  factory SayurSegarTheme.defaultTheme() {
+    return const SayurSegarTheme(
       // Primary - Vibrant blue
       primaryBackground: Color(0xFF2196F3),
       primaryForeground: Color(0xFFFFFFFF),
@@ -102,7 +102,7 @@ class LokioTheme {
   }
 
   /// Custom theme with your own colors
-  factory LokioTheme.custom({
+  factory SayurSegarTheme.custom({
     Color? primaryBackground,
     Color? primaryForeground,
     Color? secondaryBackground,
@@ -119,8 +119,8 @@ class LokioTheme {
     Color? loadingColor,
     double? defaultBorderRadius,
   }) {
-    final defaultTheme = LokioTheme.defaultTheme();
-    return LokioTheme(
+    final defaultTheme = SayurSegarTheme.defaultTheme();
+    return SayurSegarTheme(
       primaryBackground: primaryBackground ?? defaultTheme.primaryBackground,
       primaryForeground: primaryForeground ?? defaultTheme.primaryForeground,
       secondaryBackground:
@@ -143,8 +143,8 @@ class LokioTheme {
   }
 
   /// Create theme from Material 3 ColorScheme
-  factory LokioTheme.fromColorScheme(ColorScheme colorScheme) {
-    return LokioTheme(
+  factory SayurSegarTheme.fromColorScheme(ColorScheme colorScheme) {
+    return SayurSegarTheme(
       primaryBackground: colorScheme.primary,
       primaryForeground: colorScheme.onPrimary,
       secondaryBackground: colorScheme.secondary,
@@ -164,7 +164,7 @@ class LokioTheme {
   }
 
   /// Copy with method for creating modified versions
-  LokioTheme copyWith({
+  SayurSegarTheme copyWith({
     Color? primaryBackground,
     Color? primaryForeground,
     Color? secondaryBackground,
@@ -181,7 +181,7 @@ class LokioTheme {
     Color? loadingColor,
     double? defaultBorderRadius,
   }) {
-    return LokioTheme(
+    return SayurSegarTheme(
       primaryBackground: primaryBackground ?? this.primaryBackground,
       primaryForeground: primaryForeground ?? this.primaryForeground,
       secondaryBackground: secondaryBackground ?? this.secondaryBackground,

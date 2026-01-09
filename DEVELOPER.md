@@ -19,10 +19,10 @@ sayur_segar/
 │   ├── sayur_segar.dart          # Main export file
 │   └── src/
 │       ├── config/
-│       │   └── lokio_theme.dart  # Theme configuration
+│       │   └── theme.dart  # Theme configuration
 │       └── widgets/
 │           ├── button/
-│           │   ├── main.dart     # LokioButton widget
+│           │   ├── main.dart     # SayurSegar widget
 │           │   └── types.dart   # Button enums and config
 │           └── utils/
 │               └── formatter.dart # All formatter utilities
@@ -71,7 +71,7 @@ sayur_segar/
 
 All UI components are located in `lib/src/widgets/`:
 - **Button**: `lib/src/widgets/button/`
-  - `main.dart` - LokioButton widget implementation
+  - `main.dart` - SayurSegar widget implementation
   - `types.dart` - ButtonVariant, ButtonSize enums and ButtonConfig
 
 ### Utilities
@@ -87,7 +87,7 @@ All utility functions are in `lib/src/widgets/utils/`:
 ### Configuration
 
 Theme and configuration:
-- **Theme**: `lib/src/config/lokio_theme.dart`
+- **Theme**: `lib/src/config/theme.dart`
 
 ### Exports
 
@@ -235,7 +235,7 @@ dart fix --apply
 ## 📚 Additional Resources
 
 - **User Documentation**: [flutter.lokio.dev](https://flutter.lokio.dev)
-- **Package Homepage**: [sayursegar.lokio.dev](https://sayursegar.lokio.dev)
+- **Package Homepage**: [flutter.lokio.dev](https://flutter.lokio.dev)
 - **Repository**: [GitHub](https://github.com/sayur-segar/sayur-segar-for-flutter)
 - [Flutter Package Guide](https://flutter.dev/to/develop-packages)
 - [Dart Package Guide](https://dart.dev/guides/libraries/create-packages)

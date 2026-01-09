@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sayur_segar/src/config/lokio_theme.dart';
+import 'package:sayur_segar/src/config/theme.dart';
 import 'types.dart';
 
 /// A customizable button widget with multiple variants, sizes, and states.
@@ -9,14 +9,14 @@ import 'types.dart';
 ///
 /// Example:
 /// ```dart
-/// LokioButton(
+/// SayurSegar(
 ///   onPressed: () {},
 ///   variant: ButtonVariant.primary,
 ///   size: ButtonSize.medium,
 ///   child: Text('Click me'),
 /// )
 /// ```
-class LokioButton extends StatelessWidget {
+class SayurSegar extends StatelessWidget {
   /// Callback function when button is pressed
   final VoidCallback? onPressed;
 
@@ -43,9 +43,9 @@ class LokioButton extends StatelessWidget {
   final bool isExpanded;
 
   /// Optional custom theme. If not provided, uses default theme.
-  final LokioTheme? theme;
+  final SayurSegarTheme? theme;
 
-  const LokioButton({
+  const SayurSegar({
     super.key,
     required this.onPressed,
     this.variant = ButtonVariant.primary,
@@ -64,7 +64,7 @@ class LokioButton extends StatelessWidget {
        );
 
   /// Create a primary button with default styling
-  factory LokioButton.primary({
+  factory SayurSegar.primary({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -72,9 +72,9 @@ class LokioButton extends StatelessWidget {
     Widget? trailingIcon,
     bool isLoading = false,
     bool isExpanded = false,
-    LokioTheme? theme,
+    SayurSegarTheme? theme,
   }) {
-    return LokioButton(
+    return SayurSegar(
       onPressed: onPressed,
       variant: ButtonVariant.primary,
       size: size,
@@ -88,7 +88,7 @@ class LokioButton extends StatelessWidget {
   }
 
   /// Create a secondary button with default styling
-  factory LokioButton.secondary({
+  factory SayurSegar.secondary({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -96,9 +96,9 @@ class LokioButton extends StatelessWidget {
     Widget? trailingIcon,
     bool isLoading = false,
     bool isExpanded = false,
-    LokioTheme? theme,
+    SayurSegarTheme? theme,
   }) {
-    return LokioButton(
+    return SayurSegar(
       onPressed: onPressed,
       variant: ButtonVariant.secondary,
       size: size,
@@ -112,7 +112,7 @@ class LokioButton extends StatelessWidget {
   }
 
   /// Create an outline button with default styling
-  factory LokioButton.outline({
+  factory SayurSegar.outline({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -120,9 +120,9 @@ class LokioButton extends StatelessWidget {
     Widget? trailingIcon,
     bool isLoading = false,
     bool isExpanded = false,
-    LokioTheme? theme,
+    SayurSegarTheme? theme,
   }) {
-    return LokioButton(
+    return SayurSegar(
       onPressed: onPressed,
       variant: ButtonVariant.outline,
       size: size,
@@ -136,7 +136,7 @@ class LokioButton extends StatelessWidget {
   }
 
   /// Create a text button with default styling
-  factory LokioButton.text({
+  factory SayurSegar.text({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -144,9 +144,9 @@ class LokioButton extends StatelessWidget {
     Widget? trailingIcon,
     bool isLoading = false,
     bool isExpanded = false,
-    LokioTheme? theme,
+    SayurSegarTheme? theme,
   }) {
-    return LokioButton(
+    return SayurSegar(
       onPressed: onPressed,
       variant: ButtonVariant.text,
       size: size,
@@ -160,16 +160,16 @@ class LokioButton extends StatelessWidget {
   }
 
   /// Create an icon button with default styling
-  factory LokioButton.icon({
+  factory SayurSegar.icon({
     required VoidCallback? onPressed,
     required Widget icon,
     ButtonSize size = ButtonSize.medium,
     bool isLoading = false,
     bool isExpanded = false,
-    LokioTheme? theme,
+    SayurSegarTheme? theme,
     bool leading = true,
   }) {
-    return LokioButton(
+    return SayurSegar(
       onPressed: onPressed,
       variant: ButtonVariant.icon,
       size: size,
@@ -183,7 +183,7 @@ class LokioButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final lokioTheme = theme ?? LokioTheme.defaultTheme();
+    final sayurSegarTheme = theme ?? SayurSegarTheme.defaultTheme();
 
     // If loading, disable button
     final effectiveOnPressed = (isLoading || onPressed == null)
@@ -192,7 +192,7 @@ class LokioButton extends StatelessWidget {
     final isDisabled = effectiveOnPressed == null;
 
     // Get colors based on variant and state
-    final colors = _getColors(lokioTheme, isDisabled);
+    final colors = _getColors(sayurSegarTheme, isDisabled);
 
     // Get dimensions
     final buttonHeight = ButtonConfig.getHeight(size);
@@ -203,7 +203,7 @@ class LokioButton extends StatelessWidget {
 
     // Build button content
     Widget buttonContent = _buildButtonContent(
-      lokioTheme: lokioTheme,
+      sayurSegarTheme: sayurSegarTheme,
       colors: colors,
       iconSize: iconSize,
       fontSize: fontSize,
@@ -263,7 +263,7 @@ class LokioButton extends StatelessWidget {
               vertical: 0,
             ),
             side: BorderSide(
-              color: colors.border ?? lokioTheme.outlineBorder,
+              color: colors.border ?? sayurSegarTheme.outlineBorder,
               width: 0.5,
             ),
             shape: RoundedRectangleBorder(
@@ -321,7 +321,7 @@ class LokioButton extends StatelessWidget {
   }
 
   Widget _buildButtonContent({
-    required LokioTheme lokioTheme,
+    required SayurSegarTheme sayurSegarTheme,
     required _ButtonColors colors,
     required double iconSize,
     required double fontSize,
@@ -448,48 +448,48 @@ class LokioButton extends StatelessWidget {
     );
   }
 
-  _ButtonColors _getColors(LokioTheme lokioTheme, bool isDisabled) {
+  _ButtonColors _getColors(SayurSegarTheme sayurSegarTheme, bool isDisabled) {
     if (isDisabled) {
       return _ButtonColors(
-        background: lokioTheme.disabledBackground,
-        foreground: lokioTheme.disabledForeground,
-        border: lokioTheme.disabledBorder,
+        background: sayurSegarTheme.disabledBackground,
+        foreground: sayurSegarTheme.disabledForeground,
+        border: sayurSegarTheme.disabledBorder,
       );
     }
 
     switch (variant) {
       case ButtonVariant.primary:
         return _ButtonColors(
-          background: lokioTheme.primaryBackground,
-          foreground: lokioTheme.primaryForeground,
+          background: sayurSegarTheme.primaryBackground,
+          foreground: sayurSegarTheme.primaryForeground,
           border: null,
         );
 
       case ButtonVariant.secondary:
         return _ButtonColors(
-          background: lokioTheme.secondaryBackground,
-          foreground: lokioTheme.secondaryForeground,
+          background: sayurSegarTheme.secondaryBackground,
+          foreground: sayurSegarTheme.secondaryForeground,
           border: null,
         );
 
       case ButtonVariant.outline:
         return _ButtonColors(
           background: Colors.transparent,
-          foreground: lokioTheme.outlineForeground,
-          border: lokioTheme.outlineBorder,
+          foreground: sayurSegarTheme.outlineForeground,
+          border: sayurSegarTheme.outlineBorder,
         );
 
       case ButtonVariant.text:
         return _ButtonColors(
           background: Colors.transparent,
-          foreground: lokioTheme.textForeground,
+          foreground: sayurSegarTheme.textForeground,
           border: null,
         );
 
       case ButtonVariant.icon:
         return _ButtonColors(
-          background: lokioTheme.iconBackground,
-          foreground: lokioTheme.iconForeground,
+          background: sayurSegarTheme.iconBackground,
+          foreground: sayurSegarTheme.iconForeground,
           border: null,
         );
     }

@@ -14,7 +14,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  sayur_segar: ^0.1.1
+  sayur_segar: ^0.1.2
 ```
 
 Then run:
@@ -29,7 +29,7 @@ flutter pub get
 import 'package:sayur_segar/sayur_segar.dart';
 
 // Use button components
-LokioButton(
+SayurSegar(
   onPressed: () {},
   variant: ButtonVariant.primary,
   child: Text('Click Me'),
