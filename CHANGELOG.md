@@ -1,4 +1,8 @@
-## 0.0.1
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## 0.1.1
 
 * Initial release of Sayur Segar package
 * Added LokioButton widget with multiple variants (primary, secondary, outline, text, icon)
