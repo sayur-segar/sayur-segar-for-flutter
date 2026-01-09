@@ -1,6 +1,6 @@
 name: sayur_segar
 description: "A Flutter package containing reusable widgets and functions for Lokio.dev projects. Provides UI components and utility functions that can be reused to accelerate Flutter application development."
-version: 0.1.3
+version: 0.1.4
 homepage: https://flutter.lokio.dev
 repository: https://github.com/sayur-segar/sayur-segar-for-flutter
 
