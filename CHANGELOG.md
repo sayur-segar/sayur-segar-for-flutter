@@ -20,5 +20,4 @@ All notable changes to this project will be documented in this file.
 * Update package replace Lokio with Sayur Segar
 
 ## 0.1.3
-
 * Update package button widget name from SayurSegar to SayurSegarButton
