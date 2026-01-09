@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sayur_segar/src/config/lokio_theme.dart';
-import 'button_types.dart';
+import 'types.dart';
 
 /// A customizable button widget with multiple variants, sizes, and states.
 ///
@@ -57,11 +57,11 @@ class LokioButton extends StatelessWidget {
     this.isExpanded = false,
     this.theme,
   }) : assert(
-          variant == ButtonVariant.icon
-              ? (leadingIcon != null || trailingIcon != null)
-              : (child != null || leadingIcon != null || trailingIcon != null),
-          'For icon variant, provide leadingIcon or trailingIcon. For other variants, provide child, leadingIcon, or trailingIcon.',
-        );
+         variant == ButtonVariant.icon
+             ? (leadingIcon != null || trailingIcon != null)
+             : (child != null || leadingIcon != null || trailingIcon != null),
+         'For icon variant, provide leadingIcon or trailingIcon. For other variants, provide child, leadingIcon, or trailingIcon.',
+       );
 
   /// Create a primary button with default styling
   factory LokioButton.primary({
@@ -184,9 +184,11 @@ class LokioButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final lokioTheme = theme ?? LokioTheme.defaultTheme();
-    
+
     // If loading, disable button
-    final effectiveOnPressed = (isLoading || onPressed == null) ? null : onPressed;
+    final effectiveOnPressed = (isLoading || onPressed == null)
+        ? null
+        : onPressed;
     final isDisabled = effectiveOnPressed == null;
 
     // Get colors based on variant and state
@@ -296,8 +298,8 @@ class LokioButton extends StatelessWidget {
           iconSize: iconSize,
           color: colors.foreground,
           style: IconButton.styleFrom(
-            backgroundColor: colors.background == Colors.transparent 
-                ? null 
+            backgroundColor: colors.background == Colors.transparent
+                ? null
                 : colors.background,
             foregroundColor: colors.foreground,
             minimumSize: Size(buttonHeight, buttonHeight),

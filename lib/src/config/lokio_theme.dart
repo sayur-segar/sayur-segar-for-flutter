@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 /// Design tokens system for Lokio Design System
-/// 
+///
 /// This class provides all the color tokens for buttons and other components.
 /// You can customize colors by creating a custom instance.
-/// 
+///
 /// Example:
 /// ```dart
 /// // Use default theme
 /// final theme = LokioTheme.defaultTheme();
-/// 
+///
 /// // Create custom theme
 /// final customTheme = LokioTheme.custom(
 ///   primaryBackground: Colors.blue,
@@ -72,31 +72,31 @@ class LokioTheme {
       // Primary - Vibrant blue
       primaryBackground: Color(0xFF2196F3),
       primaryForeground: Color(0xFFFFFFFF),
-      
+
       // Secondary - Light blue/gray
       secondaryBackground: Color(0xFF42A5F5),
       secondaryForeground: Color(0xFFFFFFFF),
-      
+
       // Outline - Blue border
       outlineBorder: Color(0xFF2196F3),
       outlineForeground: Color(0xFF2196F3),
-      
+
       // Text - Blue text
       textForeground: Color(0xFF2196F3),
-      
+
       // Icon - Light background
       iconBackground: Color(0xFFE3F2FD),
       iconForeground: Color(0xFF2196F3),
-      
+
       // Disabled states
       disabledBackground: Color(0xFFE0E0E0),
       disabledForeground: Color(0xFF9E9E9E),
       disabledBorder: Color(0xFFE0E0E0),
       disabledText: Color(0xFF9E9E9E),
-      
+
       // Loading
       loadingColor: Color(0xFFFFFFFF),
-      
+
       defaultBorderRadius: 8.0,
     );
   }
@@ -123,8 +123,10 @@ class LokioTheme {
     return LokioTheme(
       primaryBackground: primaryBackground ?? defaultTheme.primaryBackground,
       primaryForeground: primaryForeground ?? defaultTheme.primaryForeground,
-      secondaryBackground: secondaryBackground ?? defaultTheme.secondaryBackground,
-      secondaryForeground: secondaryForeground ?? defaultTheme.secondaryForeground,
+      secondaryBackground:
+          secondaryBackground ?? defaultTheme.secondaryBackground,
+      secondaryForeground:
+          secondaryForeground ?? defaultTheme.secondaryForeground,
       outlineBorder: outlineBorder ?? defaultTheme.outlineBorder,
       outlineForeground: outlineForeground ?? defaultTheme.outlineForeground,
       textForeground: textForeground ?? defaultTheme.textForeground,
@@ -135,7 +137,8 @@ class LokioTheme {
       disabledBorder: disabledBorder ?? defaultTheme.disabledBorder,
       disabledText: disabledText ?? defaultTheme.disabledText,
       loadingColor: loadingColor ?? defaultTheme.loadingColor,
-      defaultBorderRadius: defaultBorderRadius ?? defaultTheme.defaultBorderRadius,
+      defaultBorderRadius:
+          defaultBorderRadius ?? defaultTheme.defaultBorderRadius,
     );
   }
 
@@ -197,4 +200,3 @@ class LokioTheme {
     );
   }
 }
-
