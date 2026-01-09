@@ -16,7 +16,7 @@ import 'types.dart';
 ///   child: Text('Click me'),
 /// )
 /// ```
-class SayurSegar extends StatelessWidget {
+class SayurSegarButton extends StatelessWidget {
   /// Callback function when button is pressed
   final VoidCallback? onPressed;
 
@@ -45,7 +45,7 @@ class SayurSegar extends StatelessWidget {
   /// Optional custom theme. If not provided, uses default theme.
   final SayurSegarTheme? theme;
 
-  const SayurSegar({
+  const SayurSegarButton({
     super.key,
     required this.onPressed,
     this.variant = ButtonVariant.primary,
@@ -64,7 +64,7 @@ class SayurSegar extends StatelessWidget {
        );
 
   /// Create a primary button with default styling
-  factory SayurSegar.primary({
+  factory SayurSegarButton.primary({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -74,7 +74,7 @@ class SayurSegar extends StatelessWidget {
     bool isExpanded = false,
     SayurSegarTheme? theme,
   }) {
-    return SayurSegar(
+    return SayurSegarButton(
       onPressed: onPressed,
       variant: ButtonVariant.primary,
       size: size,
@@ -88,7 +88,7 @@ class SayurSegar extends StatelessWidget {
   }
 
   /// Create a secondary button with default styling
-  factory SayurSegar.secondary({
+  factory SayurSegarButton.secondary({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -98,7 +98,7 @@ class SayurSegar extends StatelessWidget {
     bool isExpanded = false,
     SayurSegarTheme? theme,
   }) {
-    return SayurSegar(
+    return SayurSegarButton(
       onPressed: onPressed,
       variant: ButtonVariant.secondary,
       size: size,
@@ -112,7 +112,7 @@ class SayurSegar extends StatelessWidget {
   }
 
   /// Create an outline button with default styling
-  factory SayurSegar.outline({
+  factory SayurSegarButton.outline({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -122,7 +122,7 @@ class SayurSegar extends StatelessWidget {
     bool isExpanded = false,
     SayurSegarTheme? theme,
   }) {
-    return SayurSegar(
+    return SayurSegarButton(
       onPressed: onPressed,
       variant: ButtonVariant.outline,
       size: size,
@@ -136,7 +136,7 @@ class SayurSegar extends StatelessWidget {
   }
 
   /// Create a text button with default styling
-  factory SayurSegar.text({
+  factory SayurSegarButton.text({
     required VoidCallback? onPressed,
     ButtonSize size = ButtonSize.medium,
     Widget? child,
@@ -146,7 +146,7 @@ class SayurSegar extends StatelessWidget {
     bool isExpanded = false,
     SayurSegarTheme? theme,
   }) {
-    return SayurSegar(
+    return SayurSegarButton(
       onPressed: onPressed,
       variant: ButtonVariant.text,
       size: size,
@@ -160,7 +160,7 @@ class SayurSegar extends StatelessWidget {
   }
 
   /// Create an icon button with default styling
-  factory SayurSegar.icon({
+  factory SayurSegarButton.icon({
     required VoidCallback? onPressed,
     required Widget icon,
     ButtonSize size = ButtonSize.medium,
@@ -169,7 +169,7 @@ class SayurSegar extends StatelessWidget {
     SayurSegarTheme? theme,
     bool leading = true,
   }) {
-    return SayurSegar(
+    return SayurSegarButton(
       onPressed: onPressed,
       variant: ButtonVariant.icon,
       size: size,

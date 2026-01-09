@@ -14,7 +14,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  sayur_segar: ^0.1.2
+  sayur_segar: ^0.1.3
 ```
 
 Then run:
